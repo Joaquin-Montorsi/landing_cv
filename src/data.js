@@ -28,6 +28,11 @@ export const personal = {
   ],
 }
 
+export const projects = [
+  { name: "Recipes", url: null },
+  { name: "Shopping List", url: null },
+]
+
 export const skills = {
   backend: [
     "Django 5",

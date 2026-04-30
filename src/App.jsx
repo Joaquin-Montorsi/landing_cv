@@ -1,5 +1,6 @@
 import { DarkThemeToggle } from "flowbite-react"
 import Hero from "./components/Hero"
+import Projects from "./components/Projects"
 import Skills from "./components/Skills"
 import Experience from "./components/Experience"
 import Education from "./components/Education"
@@ -16,6 +17,7 @@ function App() {
 
       <main className="divide-y divide-gray-200 dark:divide-gray-700">
         <Hero />
+        <Projects />
         <Skills />
         <Experience />
         <Education />
