@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Progress } from "flowbite-react"
-import { HiOutlineTranslate, HiOutlineBadgeCheck } from "react-icons/hi"
+import { HiOutlineBadgeCheck } from "react-icons/hi"
 import CertificateDrawer from "./ui/CertificateDrawer"
 import certificateImg from "../assets/Capacitacion-Ingles-Senado.png"
 import { languages } from "../data"
@@ -27,11 +27,11 @@ export default function Languages() {
       </h2>
 
       <div className="space-y-5">
-        {languages.map(({ name, level, certificate }) => (
+        {languages.map(({ name, flag, level, certificate }) => (
           <div key={name}>
             <div className="mb-1.5 flex items-center justify-between text-sm">
               <span className="flex items-center gap-2 font-medium text-gray-900 dark:text-white">
-                <HiOutlineTranslate className="h-4 w-4" />
+                {flag && <span>{flag}</span>}
                 {name}
               </span>
               <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400">

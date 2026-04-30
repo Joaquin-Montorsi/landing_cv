@@ -1,4 +1,3 @@
-import { Badge } from "flowbite-react"
 import { HiOutlineDownload } from "react-icons/hi"
 import cvPdf from "../assets/Currículum Vitae.pdf"
 import profilePhoto from "../assets/foto-perfil.jpg"
@@ -24,14 +23,6 @@ export default function Hero() {
       <p className="mt-6 text-gray-600 dark:text-gray-400 leading-relaxed">
         {profile.summary}
       </p>
-
-      <div className="mt-6 flex flex-wrap justify-center gap-2">
-        {profile.extra.map((item) => (
-          <Badge key={item} color="gray">
-            {item}
-          </Badge>
-        ))}
-      </div>
 
       <a
         href={cvPdf}

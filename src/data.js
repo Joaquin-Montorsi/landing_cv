@@ -12,10 +12,19 @@ export const profile = {
     github: "https://github.com/Joaquin-Montorsi",
     instagram: "https://www.instagram.com/joaquinmontorsi/",
   },
-  extra: [
-    "Argentinian & Italian nationality",
-    "Argentinian & Italian passport",
-    "Driver's license",
+}
+
+export const personal = {
+  nationalities: [
+    { name: "Argentinian", flag: "🇦🇷" },
+    { name: "Italian", flag: "🇮🇹" },
+  ],
+  passports: [
+    { name: "Argentinian", flag: "🇦🇷" },
+    { name: "Italian", flag: "🇮🇹" },
+  ],
+  licenses: [
+    { name: "Driver's license" },
   ],
 }
 
@@ -79,7 +88,7 @@ export const education = {
 }
 
 export const languages = [
-  { name: "Spanish", level: "Native", cefrLevel: null, certificate: null },
-  { name: "English", level: "B1", cefrLevel: "B1", certificate: "Capacitacion-Ingles-Senado.png" },
-  { name: "Italian", level: "A1", cefrLevel: "A1", certificate: null },
+  { name: "Spanish", flag: "🇦🇷", level: "Native", certificate: null },
+  { name: "English", flag: "🇬🇧", level: "B1", certificate: "Capacitacion-Ingles-Senado.png" },
+  { name: "Italian", flag: "🇮🇹", level: "A1", certificate: null },
 ]
