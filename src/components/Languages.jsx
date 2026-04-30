@@ -1,5 +1,7 @@
+import { useState } from "react"
 import { Progress } from "flowbite-react"
 import { HiOutlineTranslate, HiOutlineBadgeCheck } from "react-icons/hi"
+import CertificateDrawer from "./ui/CertificateDrawer"
 import certificateImg from "../assets/Capacitacion-Ingles-Senado.png"
 import { languages } from "../data"
 
@@ -16,6 +18,8 @@ const levelColor = {
 }
 
 export default function Languages() {
+  const [openCert, setOpenCert] = useState(null)
+
   return (
     <section className="px-6 py-16 max-w-xl mx-auto">
       <h2 className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-10">
@@ -33,17 +37,13 @@ export default function Languages() {
               <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
                 {level}
                 {certificate && (
-                  <span className="group relative">
-                    <span className="inline-flex items-center gap-1 rounded bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 cursor-default dark:bg-green-900 dark:text-green-300">
-                      <HiOutlineBadgeCheck className="h-3.5 w-3.5" />
-                      Certificate
-                    </span>
-                    <img
-                      src={certificateImg}
-                      alt={`${name} certificate`}
-                      className="pointer-events-none absolute right-0 bottom-full mb-2 z-50 w-96 rounded-lg border border-gray-200 bg-white shadow-xl opacity-0 scale-95 transition-all duration-200 group-hover:opacity-100 group-hover:scale-100 dark:border-gray-700 dark:bg-gray-800"
-                    />
-                  </span>
+                  <button
+                    onClick={() => setOpenCert(name)}
+                    className="inline-flex items-center gap-1 rounded bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 transition hover:bg-green-200 dark:bg-green-900 dark:text-green-300 dark:hover:bg-green-800"
+                  >
+                    <HiOutlineBadgeCheck className="h-3.5 w-3.5" />
+                    Certificate
+                  </button>
                 )}
               </span>
             </div>
@@ -55,6 +55,13 @@ export default function Languages() {
           </div>
         ))}
       </div>
+
+      <CertificateDrawer
+        src={certificateImg}
+        alt="English — Certificate"
+        open={openCert !== null}
+        onClose={() => setOpenCert(null)}
+      />
     </section>
   )
 }
