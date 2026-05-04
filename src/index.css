@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+/* Scan Flowbite React so ToggleSwitch / Timeline / etc. utility classes exist (they live in node_modules) */
+@source "../node_modules/flowbite-react/dist";
+
+/* Manual theme toggle: Flowbite sets class="dark" on <html>; default Tailwind v4 dark: uses prefers-color-scheme only */
+@custom-variant dark (&:where(.dark, .dark *));
+
+.page-glow {
+  background:
+    radial-gradient(
+      ellipse 60% 50% at var(--glow-x) var(--glow-y),
+      hsl(var(--hue) 45% 78% / 0.45),
+      transparent
+    ),
+    #d4dce8;
+}
+
+:is(.dark) .page-glow {
+  background:
+    radial-gradient(
+      ellipse 60% 50% at var(--glow-x) var(--glow-y),
+      hsl(var(--hue) 50% 15% / 0.5),
+      transparent
+    ),
+    #0f172a;
+}

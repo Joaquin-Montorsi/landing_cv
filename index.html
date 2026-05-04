@@ -6,12 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joaquín Montorsi — Full-Stack Developer</title>
     <script>
-      // Prevent flash: apply dark mode before render
-      if (localStorage.getItem("flowbite-theme-mode") === "dark" ||
-          (!localStorage.getItem("flowbite-theme-mode") &&
-           window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-        document.documentElement.classList.add("dark");
-      }
+      (function () {
+        try {
+          var key = "flowbite-theme-mode"
+          var storageMode = localStorage.getItem(key)
+          var valid =
+            storageMode === "light" ||
+            storageMode === "dark" ||
+            storageMode === "auto"
+          var resolvedMode = valid ? storageMode : "auto"
+          var computedMode =
+            resolvedMode === "auto"
+              ? window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light"
+              : resolvedMode
+          if (computedMode === "dark") {
+            document.documentElement.classList.add("dark")
+          } else {
+            document.documentElement.classList.remove("dark")
+          }
+        } catch (e) {}
+      })()
     </script>
   </head>
   <body>

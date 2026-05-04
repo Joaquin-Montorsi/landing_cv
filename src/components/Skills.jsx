@@ -28,6 +28,8 @@ import {
   SiGit,
   SiTailwindcss,
 } from "react-icons/si"
+import SectionTitle from "./ui/SectionTitle"
+import GlassCard from "./ui/GlassCard"
 import { skills } from "../data"
 
 const skillIcons = {
@@ -69,20 +71,15 @@ const categories = [
 
 export default function Skills() {
   return (
-    <section className="px-6 py-16 max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-10">
-        Technical Skills
-      </h2>
+    <section className="mx-auto max-w-4xl px-6 py-16">
+      <SectionTitle>Technical Skills</SectionTitle>
 
       <div className="grid gap-6 sm:grid-cols-2">
         {categories.map(({ key, label, icon: CatIcon }) => (
-          <div
-            key={key}
-            className="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800"
-          >
-            <div className="mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
-              <CatIcon className="h-5 w-5" />
-              <h3 className="font-semibold">{label}</h3>
+          <GlassCard key={key}>
+            <div className="mb-4 flex items-center gap-2">
+              <CatIcon className="h-5 w-5 text-indigo-800 dark:text-indigo-300" />
+              <h3 className="font-semibold text-gray-950 dark:text-white">{label}</h3>
             </div>
             <div className="flex flex-wrap gap-2">
               {skills[key].map((skill) => {
@@ -90,15 +87,15 @@ export default function Skills() {
                 return (
                   <span
                     key={skill}
-                    className="inline-flex items-center gap-1.5 rounded-lg bg-gray-50 px-3 py-2 text-sm text-gray-700 dark:bg-gray-700 dark:text-gray-300"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-slate-400/80 bg-slate-300 px-3 py-1.5 text-sm font-medium text-gray-950 dark:border-slate-500 dark:bg-slate-700 dark:text-gray-100"
                   >
-                    <Icon className="h-4 w-4 shrink-0" />
+                    <Icon className="h-3.5 w-3.5 shrink-0 text-slate-800 dark:text-slate-200" />
                     {skill}
                   </span>
                 )
               })}
             </div>
-          </div>
+          </GlassCard>
         ))}
       </div>
     </section>
