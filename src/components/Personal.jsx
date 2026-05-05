@@ -12,7 +12,7 @@ const categories = [
 
 export default function Personal() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16">
+    <section className="mx-auto w-full max-w-4xl px-6 py-16">
       <SectionTitle>Personal Info</SectionTitle>
 
       <div className="grid gap-6 sm:grid-cols-3">

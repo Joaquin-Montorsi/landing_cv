@@ -14,7 +14,7 @@ import { experience } from "../data"
 
 export default function Experience() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16">
+    <section className="mx-auto w-full max-w-4xl px-6 py-16">
       <SectionTitle>Work Experience</SectionTitle>
 
       <GlassCard>

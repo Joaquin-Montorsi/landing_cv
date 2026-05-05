@@ -5,7 +5,7 @@ import { projects } from "../data"
 
 export default function Projects() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16">
+    <section className="mx-auto w-full max-w-4xl px-6 py-16">
       <SectionTitle>My Projects</SectionTitle>
 
       <div className="flex flex-wrap justify-center gap-3">

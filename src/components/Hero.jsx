@@ -5,7 +5,7 @@ import { profile } from "../data"
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16 text-center md:py-24">
+    <section className="mx-auto w-full max-w-4xl px-6 py-16 text-center md:py-24">
       <img
         src={profilePhoto}
         alt={profile.name}
@@ -20,7 +20,7 @@ export default function Hero() {
         {profile.title}
       </p>
 
-      <p className="mx-auto mt-6 max-w-xl leading-relaxed text-gray-900 dark:text-gray-100">
+      <p className="mx-auto mt-6 max-w-3xl leading-relaxed text-gray-900 dark:text-gray-100">
         {profile.summary}
       </p>
 

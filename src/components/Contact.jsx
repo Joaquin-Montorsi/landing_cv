@@ -51,7 +51,7 @@ const contactItems = [
 
 export default function Contact() {
   return (
-    <section className="mx-auto max-w-2xl px-6 py-16 text-center">
+    <section className="mx-auto w-full max-w-4xl px-6 py-16 text-center">
       <SectionTitle>Contact</SectionTitle>
       <p className="mb-8 -mt-4 text-gray-800 dark:text-gray-200">
         Feel free to reach out through any of the following channels.

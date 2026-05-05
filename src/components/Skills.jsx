@@ -72,10 +72,10 @@ const categories = [
 
 export default function Skills() {
   return (
-    <section className="mx-auto max-w-4xl px-6 py-16">
+    <section className="mx-auto w-full max-w-4xl px-6 py-16">
       <SectionTitle>Technical Skills</SectionTitle>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map(({ key, label, icon: CatIcon }) => (
           <GlassCard key={key}>
             <div className="mb-4 flex items-center gap-2">

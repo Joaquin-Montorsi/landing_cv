@@ -23,7 +23,7 @@ export default function Languages() {
   const [openCert, setOpenCert] = useState(null)
 
   return (
-    <section className="mx-auto max-w-xl px-6 py-16">
+    <section className="mx-auto w-full max-w-4xl px-6 py-16">
       <SectionTitle>Languages</SectionTitle>
 
       <GlassCard>
