@@ -47,7 +47,7 @@ const skillIcons = {
   "Zustand": SiReact,
   "Zod": SiZod,
   "React Hook Form": SiReacthookform,
-  "React Router": SiReactrouter,
+  "React Router DOM": SiReactrouter,
   "Axios": SiAxios,
   "Vite": SiVite,
   "Docker": SiDocker,
@@ -63,10 +63,11 @@ const skillIcons = {
 }
 
 const categories = [
-  { key: "backend", label: "Backend", icon: HiOutlineServer },
-  { key: "frontend", label: "Frontend", icon: HiOutlineDesktopComputer },
-  { key: "devops", label: "DevOps & GIS", icon: HiOutlineCloud },
-  { key: "other", label: "Other", icon: HiOutlineCog },
+  { key: "backend",  label: "Backend",                 icon: HiOutlineServer },
+  { key: "frontend", label: "Frontend",                icon: HiOutlineDesktopComputer },
+  { key: "gisTools", label: "GIS Tools (in progress)", icon: HiOutlineGlobe },
+  { key: "devops",   label: "DevOps & GIS",            icon: HiOutlineCloud },
+  { key: "other",    label: "Other",                   icon: HiOutlineCog },
 ]
 
 export default function Skills() {
