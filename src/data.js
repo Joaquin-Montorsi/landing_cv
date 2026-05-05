@@ -94,6 +94,6 @@ export const education = {
 
 export const languages = [
   { name: "Spanish", flag: "🇦🇷", level: "Native", certificate: null },
-  { name: "English", flag: "🇬🇧", level: "B1", certificate: "Capacitacion-Ingles-Senado.png" },
+  { name: "English", flag: "🇬🇧", level: "B1", certificate: "Capacitacion-Ingles-Senado.webp" },
   { name: "Italian", flag: "🇮🇹", level: "A1", certificate: null },
 ]

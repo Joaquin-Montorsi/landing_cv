@@ -1,6 +1,6 @@
 import { HiOutlineDownload } from "react-icons/hi"
 import cvPdf from "../assets/Currículum Vitae.pdf"
-import profilePhoto from "../assets/foto-perfil.jpg"
+import profilePhoto from "../assets/foto-perfil.webp"
 import { profile } from "../data"
 
 export default function Hero() {

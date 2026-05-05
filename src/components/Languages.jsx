@@ -4,7 +4,7 @@ import { HiOutlineBadgeCheck } from "react-icons/hi"
 import SectionTitle from "./ui/SectionTitle"
 import GlassCard from "./ui/GlassCard"
 import CertificateDrawer from "./ui/CertificateDrawer"
-import certificateImg from "../assets/Capacitacion-Ingles-Senado.png"
+import certificateImg from "../assets/Capacitacion-Ingles-Senado.webp"
 import { languages } from "../data"
 
 const levelProgress = {
