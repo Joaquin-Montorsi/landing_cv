@@ -33,6 +33,14 @@ export default function Experience() {
                   <p className="mb-3 text-sm font-semibold text-indigo-800 dark:text-indigo-300">
                     {job.company}
                   </p>
+                  {job.technicalChallenge && (
+                    <p className="mb-4 border-l-2 border-indigo-500 pl-3 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
+                      <span className="font-semibold text-gray-950 dark:text-white">
+                        Technical challenge:{" "}
+                      </span>
+                      {job.technicalChallenge}
+                    </p>
+                  )}
                   <ul className="space-y-2">
                     {job.achievements.map((a, i) => (
                       <li key={i} className="flex gap-2 text-sm text-gray-900 dark:text-gray-100">

@@ -2,7 +2,7 @@ export const profile = {
   name: "Joaquín Montorsi",
   title: "Full-Stack Software Engineer",
   summary:
-    "Full-Stack Software Engineer with 4+ years designing and delivering end-to-end web systems-backend services, data layers, and React front ends-built for reliability and maintainability. I translate environmental and institutional requirements into engineered solutions: structured workflows, PostGIS-backed insight, and integrations that replace ad-hoc tools with coherent, auditable systems for public-sector teams.",
+    "Full-Stack Software Engineer with 4+ years designing and delivering end-to-end web systems—backend services, data layers, and React front ends—built for reliability and maintainability. I translate environmental and institutional requirements into engineered solutions: structured workflows, PostGIS-backed insight, and integrations that replace ad-hoc tools with coherent, auditable systems for public-sector teams.",
   contact: {
     email: "joaquinmontorsi@gmail.com",
     phone: "+54 221-654-5669",
@@ -50,15 +50,14 @@ export const skills = {
     "Zustand",
     "Zod",
     "React Hook Form",
-    "react-router-dom",
+    "React Router DOM",
     "Axios",
     "Vite",
   ],
-  gisTools: ["OpenLayers"],
+  gisTools: ["OpenLayers", "GeoServer"],
   devops: [
     "Docker",
     "Docker Compose",
-    "GeoServer",
     "Metabase",
     "pgAdmin",
     "Rclone",
@@ -72,6 +71,8 @@ export const experience = [
     role: "Full-Stack Software Developer",
     company: "Environmental Office - Ministry of Infrastructure",
     period: "2022 – Present",
+    technicalChallenge:
+      "Synchronizing operational assets and data between the cloud and on-premises servers through asynchronous processes, consolidating a single source of truth in PostGIS without disrupting day-to-day operations.",
     achievements: [
       "Led migration of 150+ environmental projects from Google Drive/Trello to a PostGIS database, eliminating data-loss risks and cutting search time by 30%.",
       "Built a Django-React platform with role-based permissions and automated notifications, replacing Trello and reducing workflow dependencies by 50%.",

@@ -65,8 +65,8 @@ const skillIcons = {
 const categories = [
   { key: "backend",  label: "Backend",                 icon: HiOutlineServer },
   { key: "frontend", label: "Frontend",                icon: HiOutlineDesktopComputer },
+  { key: "devops",   label: "DevOps",                  icon: HiOutlineCloud },
   { key: "gisTools", label: "GIS Tools (in progress)", icon: HiOutlineGlobe },
-  { key: "devops",   label: "DevOps & GIS",            icon: HiOutlineCloud },
   { key: "other",    label: "Other",                   icon: HiOutlineCog },
 ]
 
