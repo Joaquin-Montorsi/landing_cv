@@ -17,7 +17,7 @@ export default function Languages() {
   const pillContent = (name, abbr, level) => (
     <>
       <span
-        className="flex h-6 min-w-[1.5rem] shrink-0 items-center justify-center rounded-full bg-white/55 px-1 text-[10px] font-bold leading-none text-gray-950 dark:bg-black/25 dark:text-gray-100"
+        className="flex h-6 min-w-6 shrink-0 items-center justify-center rounded-full bg-white/55 px-1 text-[10px] font-bold leading-none text-gray-950 dark:bg-black/25 dark:text-gray-100"
         aria-hidden
       >
         <span className={abbr.length === 1 ? "text-xs" : ""}>{abbr}</span>

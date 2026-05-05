@@ -2,9 +2,11 @@ import {
   HiOutlineServer,
   HiOutlineDesktopComputer,
   HiOutlineCloud,
-  HiOutlineCog,
   HiOutlineGlobe,
   HiOutlineUserGroup,
+  HiOutlineLightningBolt,
+  HiOutlineChatAlt,
+  HiOutlineSparkles,
   HiOutlineCode,
 } from "react-icons/hi"
 import {
@@ -22,11 +24,12 @@ import {
   SiAxios,
   SiVite,
   SiDocker,
-  SiMetabase,
   SiRclone,
   SiGithubactions,
   SiGit,
   SiTailwindcss,
+  SiNginx,
+  SiUbuntu,
 } from "react-icons/si"
 import SectionTitle from "./ui/SectionTitle"
 import GlassCard from "./ui/GlassCard"
@@ -41,8 +44,8 @@ const skillIcons = {
   "Python 3.12+": SiPython,
   "React 18": SiReact,
   "TypeScript": SiTypescript,
-  "OpenLayers": SiOpenlayers,
-  "Flowbite React": SiTailwindcss,
+  "OpenLayers / Leaflet (basic)": SiOpenlayers,
+  "Tailwind CSS": SiTailwindcss,
   "Redux": SiRedux,
   "Zustand": SiReact,
   "Zod": SiZod,
@@ -53,21 +56,22 @@ const skillIcons = {
   "Docker": SiDocker,
   "Docker Compose": SiDocker,
   "GeoServer": HiOutlineGlobe,
-  "Metabase": SiMetabase,
-  "pgAdmin": SiPostgresql,
+  "Nginx": SiNginx,
   "Rclone": SiRclone,
-  "CI/CD": SiGithubactions,
+  "Linux (Ubuntu)": SiUbuntu,
   "Git": SiGit,
-  "Agile/Scrum": HiOutlineCog,
-  "Cross-functional collaboration": HiOutlineUserGroup,
+  "CI/CD": SiGithubactions,
+  "Technical autonomy (design to deployment)": HiOutlineLightningBolt,
+  "Stakeholder requirements → engineering specs": HiOutlineChatAlt,
+  "Pragmatic, business-first solutions": HiOutlineSparkles,
 }
 
 const categories = [
-  { key: "backend",  label: "Backend",                 icon: HiOutlineServer },
-  { key: "frontend", label: "Frontend",                icon: HiOutlineDesktopComputer },
-  { key: "devops",   label: "DevOps",                  icon: HiOutlineCloud },
-  { key: "gisTools", label: "GIS Tools (in progress)", icon: HiOutlineGlobe },
-  { key: "other",    label: "Other",                   icon: HiOutlineCog },
+  { key: "backend", label: "Backend", icon: HiOutlineServer },
+  { key: "frontend", label: "Frontend", icon: HiOutlineDesktopComputer },
+  { key: "systems", label: "Systems & Infrastructure", icon: HiOutlineCloud },
+  { key: "gisTools", label: "GIS", icon: HiOutlineGlobe },
+  { key: "other", label: "Soft skills", icon: HiOutlineUserGroup },
 ]
 
 export default function Skills() {
