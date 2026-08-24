@@ -27,12 +27,12 @@ function App() {
 
         <main>
           <Hero />
-          <Projects />
-          <Skills />
           <Experience />
+          <Skills />
           <Education />
           <Languages />
           <Personal />
+          <Projects />
           <Contact />
         </main>
 

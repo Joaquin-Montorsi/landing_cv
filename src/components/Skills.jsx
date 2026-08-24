@@ -5,18 +5,25 @@ import {
   HiOutlineGlobe,
   HiOutlineUserGroup,
   HiOutlineLightningBolt,
-  HiOutlineChatAlt,
+  HiOutlineLightBulb,
+  HiOutlineClipboardList,
+  HiOutlineRefresh,
   HiOutlineSparkles,
   HiOutlineCode,
 } from "react-icons/hi"
 import {
   SiDjango,
   SiJsonwebtokens,
+  SiGoogle,
+  SiSwagger,
   SiPostgresql,
   SiPython,
+  SiJavascript,
+  SiHtml5,
   SiReact,
   SiTypescript,
   SiOpenlayers,
+  SiJson,
   SiRedux,
   SiZod,
   SiReacthookform,
@@ -25,45 +32,57 @@ import {
   SiVite,
   SiDocker,
   SiRclone,
-  SiGithubactions,
+  SiGnubash,
+  SiPypi,
   SiGit,
   SiTailwindcss,
   SiNginx,
+  SiGunicorn,
   SiUbuntu,
 } from "react-icons/si"
 import SectionTitle from "./ui/SectionTitle"
 import GlassCard from "./ui/GlassCard"
+import SkillLevelBar, { levels, levelBadgeClass } from "./ui/SkillLevelBar"
 import { skills } from "../data"
 
 const skillIcons = {
-  "Django 5": SiDjango,
+  "Python": SiPython,
+  "Django": SiDjango,
   "Django REST Framework": SiDjango,
   "Simple JWT": SiJsonwebtokens,
+  "Google OAuth 2": SiGoogle,
   "PostgreSQL": SiPostgresql,
   "PostGIS": SiPostgresql,
-  "Python 3.12+": SiPython,
-  "React 18": SiReact,
+  "DRF Spectacular": SiSwagger,
+  "JavaScript": SiJavascript,
   "TypeScript": SiTypescript,
-  "OpenLayers / Leaflet (basic)": SiOpenlayers,
+  "HTML & CSS": SiHtml5,
+  "React": SiReact,
   "Tailwind CSS": SiTailwindcss,
-  "Redux": SiRedux,
-  "Zustand": SiReact,
-  "Zod": SiZod,
   "React Hook Form": SiReacthookform,
-  "React Router DOM": SiReactrouter,
+  "Zod": SiZod,
+  "React Router": SiReactrouter,
   "Axios": SiAxios,
   "Vite": SiVite,
+  "Zustand": SiReact,
+  "Redux": SiRedux,
   "Docker": SiDocker,
   "Docker Compose": SiDocker,
-  "GeoServer": HiOutlineGlobe,
-  "Nginx": SiNginx,
-  "Rclone": SiRclone,
   "Linux (Ubuntu)": SiUbuntu,
+  "Bash": SiGnubash,
   "Git": SiGit,
-  "CI/CD": SiGithubactions,
-  "Technical autonomy (design to deployment)": HiOutlineLightningBolt,
-  "Stakeholder requirements → engineering specs": HiOutlineChatAlt,
-  "Pragmatic, business-first solutions": HiOutlineSparkles,
+  "Rclone": SiRclone,
+  "Pipenv": SiPypi,
+  "Nginx": SiNginx,
+  "Gunicorn": SiGunicorn,
+  "GeoServer": HiOutlineGlobe,
+  "OpenLayers": SiOpenlayers,
+  "GeoJSON": SiJson,
+  "Problem-solving": HiOutlineLightBulb,
+  "Critical thinking": HiOutlineSparkles,
+  "Independence at work": HiOutlineLightningBolt,
+  "Focus on processes and procedures": HiOutlineClipboardList,
+  "Adaptability": HiOutlineRefresh,
 }
 
 const categories = [
@@ -79,6 +98,10 @@ export default function Skills() {
     <section className="mx-auto w-full max-w-4xl px-6 py-16">
       <SectionTitle>Technical Skills</SectionTitle>
 
+      <div className="mb-8 flex justify-center">
+        <SkillLevelBar />
+      </div>
+
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map(({ key, label, icon: CatIcon }) => (
           <GlassCard key={key}>
@@ -87,15 +110,24 @@ export default function Skills() {
               <h3 className="font-semibold text-gray-950 dark:text-white">{label}</h3>
             </div>
             <div className="flex flex-wrap gap-2">
-              {skills[key].map((skill) => {
-                const Icon = skillIcons[skill] || HiOutlineCode
+              {skills[key].map(({ name, level }) => {
+                const Icon = skillIcons[name] || HiOutlineCode
+                const levelStyle = levels[level]
                 return (
                   <span
-                    key={skill}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-slate-400/80 bg-slate-300 px-3 py-1.5 text-sm font-medium text-gray-950 dark:border-slate-500 dark:bg-slate-700 dark:text-gray-100"
+                    key={name}
+                    className={`inline-flex items-center gap-1.5 rounded-full border border-slate-400/80 bg-slate-300 py-1.5 pl-3 text-sm font-medium text-gray-950 dark:border-slate-500 dark:bg-slate-700 dark:text-gray-100 ${
+                      levelStyle ? "pr-1.5" : "pr-3"
+                    }`}
+                    title={levelStyle ? `${name} — ${level}` : name}
                   >
                     <Icon className="h-3.5 w-3.5 shrink-0 text-slate-800 dark:text-slate-200" />
-                    {skill}
+                    {name}
+                    {levelStyle && (
+                      <span className={`${levelBadgeClass} ${levelStyle.badge}`}>
+                        {levelStyle.abbr}
+                      </span>
+                    )}
                   </span>
                 )
               })}

@@ -1,8 +1,8 @@
 export const profile = {
   name: "Joaquín Montorsi",
-  title: "Full-Stack Software Developer",
+  title: "Full-Stack Developer | Backend & Data Management",
   summary:
-    "Full-Stack Developer with an engineering background and 4+ years of technical experience. I specialize in robust web applications and improving data infrastructure—turning legacy, fragmented setups into scalable Django–React platforms. My work combines rigorous problem-solving with pragmatic systems tooling (Docker, Nginx, Rclone) so information stays consistent, secure, and available for environmental and public-sector teams.",
+    "Full-Stack Developer specializing in backend development, with experience in the design, development, testing, deployment, and maintenance of Dockerized web applications, RESTful APIs, and databases. Advanced knowledge of Python, Django, React, TypeScript, Docker, and Linux, along with experience in security using JWT, data synchronization, and geospatial tools. I work best in teams that promote technical learning, agile methodologies, and process documentation.",
   contact: {
     email: "joaquinmontorsi@gmail.com",
     phone: "+54 221-654-5669",
@@ -35,72 +35,99 @@ export const projects = [
 
 export const skills = {
   backend: [
-    "Python 3.12+",
-    "Django 5",
-    "Django REST Framework",
-    "Simple JWT",
-    "PostgreSQL",
-    "PostGIS",
+    { name: "Python", level: "Advanced" },
+    { name: "Django", level: "Advanced" },
+    { name: "Django REST Framework", level: "Advanced" },
+    { name: "Simple JWT", level: "Intermediate" },
+    { name: "Google OAuth 2", level: "Intermediate" },
+    { name: "PostgreSQL", level: "Intermediate" },
+    { name: "PostGIS", level: "Intermediate" },
+    { name: "DRF Spectacular", level: "Basic" },
   ],
   frontend: [
-    "React 18",
-    "TypeScript",
-    "Redux",
-    "Zustand",
-    "Tailwind CSS",
-    "Zod",
-    "React Hook Form",
-    "React Router DOM",
-    "Axios",
-    "Vite",
+    { name: "JavaScript", level: "Advanced" },
+    { name: "TypeScript", level: "Advanced" },
+    { name: "HTML & CSS", level: "Advanced" },
+    { name: "React", level: "Advanced" },
+    { name: "Tailwind CSS", level: "Advanced" },
+    { name: "React Hook Form", level: "Advanced" },
+    { name: "Zod", level: "Advanced" },
+    { name: "React Router", level: "Advanced" },
+    { name: "Axios", level: "Advanced" },
+    { name: "Vite", level: "Advanced" },
+    { name: "Zustand", level: "Basic" },
+    { name: "Redux", level: "Basic" },
   ],
   systems: [
-    "Docker",
-    "Docker Compose",
-    "Nginx",
-    "Rclone",
-    "Linux (Ubuntu)",
-    "Git",
-    "CI/CD",
+    { name: "Docker", level: "Advanced" },
+    { name: "Docker Compose", level: "Advanced" },
+    { name: "Linux (Ubuntu)", level: "Advanced" },
+    { name: "Bash", level: "Advanced" },
+    { name: "Git", level: "Advanced" },
+    { name: "Rclone", level: "Advanced" },
+    { name: "Pipenv", level: "Advanced" },
+    { name: "Nginx", level: "Intermediate" },
+    { name: "Gunicorn", level: "Intermediate" },
   ],
-  gisTools: ["GeoServer", "OpenLayers / Leaflet (basic)"],
+  gisTools: [
+    { name: "GeoServer", level: "Basic" },
+    { name: "OpenLayers", level: "Basic" },
+    { name: "GeoJSON", level: "Basic" },
+  ],
   other: [
-    "Technical autonomy (design to deployment)",
-    "Stakeholder requirements → engineering specs",
-    "Pragmatic, business-first solutions",
+    { name: "Problem-solving", level: null },
+    { name: "Critical thinking", level: null },
+    { name: "Independence at work", level: null },
+    { name: "Focus on processes and procedures", level: null },
+    { name: "Adaptability", level: null },
   ],
 }
 
 export const experience = [
   {
-    role: "Full-Stack Software Developer",
-    company: "Environmental Office — Ministry of Infrastructure",
+    role: "Full-Stack Developer",
+    company: "Ministry of Infrastructure of the Province of Buenos Aires",
     period: "2022 – Present",
     technicalChallenge:
       "Building a progressive synchronization and migration path from cloud file storage (Google Drive) to an on-premises relational source of truth—using Django, Rclone, and asynchronous workflows—without disrupting live environmental operations.",
     achievements: [
-      "Designed and shipped a progressive migration for 150+ environmental projects, integrating Django with Google Drive via Rclone so Drive was no longer the system of record; centralized truth on our own stack and reduced data-loss and corruption risk.",
-      "Delivered a tailored Django–React operations platform with role-based permissions and notifications, replacing generic Trello/Drive workflows and cutting operational tool dependency by about 50%.",
-      "Established the initial geospatial stack with GeoServer for serving critical infrastructure layers and groundwork for map-based consultation (visualization with OpenLayers / Leaflet at a basic, in-development level).",
+      "Designed, developed, tested, and maintained a web portal for the management and administration of environmental projects, covering front-end, back-end, and database work.",
+      "Built and maintained RESTful APIs with Python, Django, and Django REST Framework, including JWT authentication, granular user permissions, and endpoint documentation.",
+      "Led the gradual migration of data and documentation from Google Drive to our own infrastructure, with bidirectional synchronization via Rclone and Google Service Accounts, safeguarding organization, integrity, availability, and redundancy.",
+      "Replaced Trello as the project tracking system with a custom web application tailored to the department's operational needs.",
+      "Designed and maintained React, Tailwind CSS, and TypeScript interfaces, including forms, hooks, validation schemas with Zod, and state management.",
+      "Managed Docker containers and microservice architectures with Docker Compose, handled static and dynamic files with WhiteNoise and MinIO, and administered, deployed, migrated, and backed up PostgreSQL and PostGIS databases.",
+      "Gathered requirements with non-specialized teams and translated functional needs into user stories and technical specifications, defining standardized nomenclatures and GeoServer workspace methodologies alongside the GIS team.",
+      "Prepared technical documentation, application logs, and user procedures, applying agile methodologies to plan and monitor development phases.",
     ],
   },
 ]
 
-export const education = {
-  institution: "National University of La Plata (UNLP)",
-  degree: "Computer Engineering — advanced standing (~80% completed)",
-  period: "2015 – 2025",
-  details: [
-    "University Analyst Programmer track — advanced standing",
-    "General GPA: 6.23",
-    "Honorable Senate of the Province of Buenos Aires (2025)",
-    "English course — Level 2",
-    "Strong foundation in computing fundamentals, data structures, and systems-oriented thinking",
-  ],
-}
+export const education = [
+  {
+    institution: "National University of La Plata (UNLP)",
+    degree: "Computer Engineering — on hiatus",
+    period: "2015 – 2025",
+    details: [
+      "University Analyst Programmer track — advanced standing",
+      "General GPA: 6.23",
+      "Honorable Senate of the Province of Buenos Aires (2025)",
+      "English course — Level 2",
+      "Strong foundation in computing fundamentals, data structures, and systems-oriented thinking",
+    ],
+  },
+  {
+    institution: "Technical School No. 2 in 9 de Julio",
+    degree: "Electromechanical Technician — completed",
+    period: null,
+    details: [
+      "Technical secondary education with an engineering-oriented curriculum",
+    ],
+  },
+]
 
 export const languages = [
   { name: "Spanish", abbr: "Ñ", level: "Native", certificate: null },
-  { name: "English", abbr: "EN", level: "B1", certificate: "Capacitacion-Ingles-Senado.webp" },
+  { name: "English", abbr: "EN", level: "B2", certificate: "Capacitacion-Ingles-Senado.webp" },
   { name: "Italian", abbr: "IT", level: "A1", certificate: null },
 ]
