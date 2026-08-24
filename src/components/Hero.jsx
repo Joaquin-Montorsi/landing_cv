@@ -1,13 +1,12 @@
 import { HiOutlineDownload } from "react-icons/hi"
 import cvPdf from "../assets/Currículum Vitae.pdf"
-import profilePhoto from "../assets/foto-perfil.webp"
 import { profile } from "../data"
 
 export default function Hero() {
   return (
     <section className="mx-auto w-full max-w-4xl px-6 py-16 text-center md:py-24">
       <img
-        src={profilePhoto}
+        src={`${import.meta.env.BASE_URL}selfie.png`}
         alt={profile.name}
         className="mx-auto h-50 w-50 rounded-full object-cover shadow-lg ring-4 ring-indigo-400/60 dark:ring-indigo-500/50"
       />
