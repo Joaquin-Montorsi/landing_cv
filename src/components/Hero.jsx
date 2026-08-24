@@ -1,5 +1,5 @@
 import { HiOutlineDownload } from "react-icons/hi"
-import cvPdf from "../assets/Currículum Vitae.pdf"
+import cvPdf from "../assets/CV - Joaquín Montorsi - EN.pdf"
 import { profile } from "../data"
 
 export default function Hero() {
